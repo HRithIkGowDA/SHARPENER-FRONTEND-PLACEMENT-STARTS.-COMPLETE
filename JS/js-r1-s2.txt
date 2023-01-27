@@ -1,0 +1,13 @@
+Javascript Round 1 - SET 2-Solutions
+
+
+
+
+1) process.nextTick() is a method in Node.js that allows you to schedule a callback function to be executed on the next turn of the event loop. 
+
+
+
+2) Using the Array.isArray() method , Using the instanceof operator ,  Using the Object.prototype.toString.call() method , Using the typeof operator
+
+
+

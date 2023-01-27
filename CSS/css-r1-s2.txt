@@ -1,0 +1,137 @@
+CSS Round 1 - Set 2 Solutions
+
+
+Z-INDEX
+
+
+1) The z-index property in CSS is used to specify the stack order of elements. It determines the order in which elements are stacked on top of each other, with elements having a higher z-index value appearing on top of elements with a lower z-index value.
+
+
+
+2) The z-index property is necessary when elements on a webpage overlap and you want to control which element appears on top. For example, if you have a dropdown menu and a modal window on a page, you may want the modal window to appear on top of the dropdown menu when it is open.
+
+
+
+3) The best practice for using the z-index property is to use it sparingly and only when necessary. It is also a good idea to use a consistent z-index value for all elements within a specific container, rather than using different values for different elements. Additionally, it is important to be aware of the stacking context of elements when using z-index.
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+FLEX-BOX
+
+
+1) flex-direction: column , flex-direction: column-reverse , flex-direction: row, flex-direction: row-reverse
+
+
+
+2) align-items:center , align-items:strech  , align-items:flex-start  , align-items:flex-end
+
+
+
+3) using flexbox 
+
+
+
+<div class="parent-container">
+
+    <div class="centered-div">
+
+        <!-- The content you want to center goes here -->
+
+    </div>
+
+</div>
+
+
+
+This will center the div element both horizontally and vertically in the parent container.
+
+
+
+
+
+4)The different properties of flexbox include:
+
+flex-direction: This property sets the direction of the main axis of the flex container. It can have the following values: row, row-reverse, column, and column-reverse.
+flex-wrap: This property sets whether the flex items should wrap or not. It can have the following values: nowrap, wrap, and wrap-reverse.
+justify-content: This property sets the alignment of the flex items along the main axis. It can have the following values: flex-start, flex-end, center, space-between, and space-around.
+align-items: This property sets the alignment of the flex items along the cross axis. It can have the following values: flex-start, flex-end, center, baseline, and stretch.
+align-content: This property sets the alignment of the flex lines along the cross axis. It can have the following values: flex-start, flex-end, center, space-between, space-around, and stretch.
+flex-grow: This property sets the proportion of the available space in the container that an item should take up. The default value is 0.
+flex-shrink: This property sets the proportion of the available space in the container that an item should shrink by. The default value is 1.
+flex-basis: This property sets the initial size of an item before any free space is distributed. The default value is auto.
+align-self: This property sets the alignment of a specific flex item along the cross axis. This property overrides the align-items property for a specific item.
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+CSS
+
+
+
+
+1) VH (viewport height) and VW (viewport width) in CSS are units of measurement that represent a percentage of the viewport size. VH is equal to 1% of the viewport height and VW is equal to 1% of the viewport width. These units can be used to set the height and width of elements relative to the size of the viewport.
+
+
+
+2) The "font-family" property is used for changing the font face.
+
+
+
+3) The "float" property in CSS is used to float an element to the left or right of its containing element, allowing other elements to wrap around it. It is often used for layout purposes.
+
+
+
+4) In CSS, selectors are used to select elements and apply styles to them.
+
+"div" selects all <div> elements
+"p" selects all <p> elements
+"div p" selects all <p> elements that are inside of <div> elements
+"div ~ p" selects all <p> elements that come after <div> elements
+"div + p" selects the first <p> element that immediately follows a <div> element
+"div > p" selects all <p> elements that are direct children of <div> elements
+
+
+5) using flex-box
+
+
+
+.parent {
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+}
+
+.child {
+
+  width: 50%;
+
+  height: 50%;
+
+}
+
+
+
+
+
+
+
+6) "!important" in CSS is used to give a higher priority to a particular rule, making it override any other styles that may have been applied to the same element.
+
+
+
+7) CSS2 (Cascading Style Sheets Level 2) is the previous version of CSS, while CSS3 is the latest version. CSS3 includes new features such as media queries, animations, and new selectors, as well as improved support for responsive design and accessibility.
+
+
+
+
+

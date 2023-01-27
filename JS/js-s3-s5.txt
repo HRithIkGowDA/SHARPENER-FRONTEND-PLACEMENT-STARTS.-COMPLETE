@@ -1,0 +1,259 @@
+Javascript Round 3 - SET 5-SOLUTIONS
+
+
+
+
+1) To iterate through an object and print all the values without the keys in JavaScript, you can use a for...in loop and access the object's values using the object[key] notation. 
+
+
+
+example:
+
+
+
+let obj = {
+
+  key1: "value1",
+
+  key2: "value2",
+
+  key3: "value3"
+
+};
+
+
+
+for (let key in obj) {
+
+  console.log(obj[key]);
+
+}
+
+
+
+
+
+2) The NaN property in JavaScript stands for "Not-a-Number". It is a special value that represents the result of an undefined or unrepresentable operation, such as the square root of a negative number or the result of dividing 0 by 0.
+
+
+
+3) Pass by value means that when we pass a primitive data type to a function, a copy of that data is passed to the function. So, any changes made to the data inside the function do not reflect outside the function.
+
+
+
+Pass by reference means that when we pass an object to a function, a reference to the memory location of that object is passed to the function. So, any changes made to the object inside the function reflect outside the function too.
+
+
+
+4) The "this" keyword in JavaScript refers to the object that the function is a method of. In other words, it refers to the object that is calling the function. The value of "this" changes depending on how the function is called, the context of the function. The value of this is determined by the execution context, which is the code that is running at the time the function is called.
+
+
+
+5) Memoization is a technique in JavaScript where a function is used to cache the results of expensive function calls and return the cached result when the same inputs occur again
+
+
+
+let memoizedAdd = (() => {
+
+  let cache = {};
+
+  return (a, b) => {
+
+    let key = `${a},${b}`;
+
+    if (key in cache) {
+
+      console.log('Fetching from cache');
+
+      return cache[key];
+
+    } else {
+
+      console.log('Calculating result');
+
+      let result = a + b;
+
+      cache[key] = result;
+
+      return result;
+
+    }
+
+  }
+
+})();
+
+console.log(memoizedAdd(1, 2)); // Output: Calculating result, 3
+
+console.log(memoizedAdd(1, 2)); // Output: Fetching from cache, 3
+
+console.log(memoizedAdd(2, 3)); // Output: Calculating result, 5
+
+
+
+6) there are 7 data types: Number, String, Boolean, Symbol, Object, Function, Undefined.
+
+
+
+7)  Escape characters are used to represent certain special characters within a string, such as a newline or a tab. They are represented by a backslash () followed by a letter or symbol. For example, the escape character for a newline is \n, and the escape character for a tab is \t
+
+
+
+let str = "Hello \n World";
+
+console.log(str);
+
+
+
+// Output:
+
+// Hello
+
+// World
+
+
+
+8) The break statement is used to exit a loop or a switch statement. Once the break statement is executed, the program will exit the loop or switch statement and continue executing the next line of code. The continue statement, on the other hand, is used to skip an iteration of a loop. It jumps to the next iteration of the loop, skipping any code that comes after it in the current iteration.
+
+
+
+
+
+//************break
+
+for (let i = 0; i < 10; i++) {
+
+  if (i === 5) {
+
+    break;
+
+  }
+
+  console.log(i);
+
+}
+
+
+
+// Output: 
+
+// 0
+
+// 1
+
+// 2
+
+// 3
+
+// 4
+
+
+
+//*******************continue
+
+
+
+for (let i = 0; i < 10; i++) {
+
+  if (i % 2 !== 0) {
+
+    continue;
+
+  }
+
+  console.log(i);
+
+}
+
+
+
+// Output: 
+
+// 0
+
+// 2
+
+// 4
+
+// 6
+
+// 8
+
+
+
+
+
+9) The type of an array in javascript is object. The typeof operator returns the data type of a variable, which is object for arrays.
+
+
+
+let arr = [1, 2, 3];
+
+console.log(typeof arr); // Output: object
+
+
+
+
+
+10) An anonymous function in JavaScript is a function that is not bound to an identifier, or a named function. Anonymous functions are often used as arguments to other functions or as callbacks.
+
+
+
+setTimeout(function() { //st is the anonymous fucntion
+
+  console.log("Hello World");
+
+}, 1000);
+
+
+
+
+
+11)  event.preventDefault() and event.stopPropagation() are both event handling methods, but they serve different purposes:
+
+event.preventDefault() prevents the default behavior of an event from occurring. For example, if you have a form on a web page and you don't want the form to submit when the user presses the "submit" button, you can use event.preventDefault() to prevent the form from being submitted.
+
+
+
+event.stopPropagation() prevents the event from propagating (or "bubbling up") through the DOM. This means that if you have an event listener on a parent element and a child element, the event will not be triggered on the parent element if event.stopPropagation() is used on the child element.
+
+
+
+
+
+12) A higher-order function is a function that takes one or more functions as arguments and/or returns a function. They are used to create abstractions and to compose functions. In JavaScript, functions are first-class citizens, meaning that they can be used like any other data type (numbers, strings, etc.) . they can also return a function.
+
+ 
+
+function delay(callback) {
+
+  setTimeout(callback, 1000);
+
+}
+
+
+
+delay(() => {
+
+  console.log("Hello, World!");
+
+});
+
+
+
+delay is a higher-order function that takes a single argument, callback, which is a function. The delay function calls setTimeout, passing in the callback function and a delay time of 1000 milliseconds.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,246 @@
+Javascript Round 2 - SET 2-SOLUTIONS
+
+
+
+
+1)
+
+Difference between let, var and const
+
+
+
+var: Variables declared with the var keyword are function scoped, which means that they are only accessible within the function in which they are declared. If a variable is declared with var outside of any function, it becomes a global variable, accessible throughout the entire program. Variables declared with var are also hoisted to the top of their scope, meaning that they can be accessed before they are declared.
+
+
+
+
+let: Variables declared with the let keyword are block scoped, which means that they are only accessible within the block in which they are declared. Variables declared with let cannot be accessed before they are declared, and are not hoisted to the top of their scope.
+
+
+
+
+const: Variables declared with the const keyword are also block scoped, but they are read-only, meaning that their value cannot be reassigned.
+
+
+example:
+
+
+
+function myFunc() {
+
+  var x = 1;
+
+  let y = 2;
+
+  const z = 3;
+
+  
+
+  if (true) {
+
+   var x = 4;
+
+   let y = 5;
+
+   const z = 6;
+
+  }
+
+  console.log(x); // 4
+
+  console.log(y); // 2
+
+  console.log(z); // 3
+
+}
+
+myFunc();
+
+
+
+
+
+2) 
+
+
+
+Hosting: In JavaScript, variable and function declarations are "hoisted" to the top of their scope. This means that a variable or function can be used before it is declared in the code.
+
+
+
+
+Callbacks: A callback is a function that is passed as an argument to another function and is executed after the first function has completed its task. It is a way to handle asynchronous operations in JavaScript.
+
+
+
+
+ES6 features: ECMAScript 6 (ES6) is the latest version of JavaScript, and it introduces several new features such as:Arrow functions
+Template literals
+Destructuring
+Classes
+Modules
+Promises
+example:
+
+
+
+function myFunc(cb) {
+
+  setTimeout(() => {
+
+    console.log("Hello World!");
+
+    cb();
+
+  }, 1000);
+
+}
+
+
+
+myFunc(() => console.log("Callback executed!"));
+
+
+
+
+
+
+
+
+
+3)
+
+
+
+
+
+array.map(): The map() method creates a new array with the results of calling a provided function on every element in the calling array. It does not change the original array.
+array.filter(): The filter() method creates a new array with all elements that pass the test implemented by the provided function. It does not change the original array.
+
+
+example:
+
+
+
+let numbers = [1, 2, 3, 4, 5];
+
+
+
+let doubledNumbers = numbers.map(x => x * 2);
+
+console.log(doubledNumbers); // [2, 4, 6, 8, 10]
+
+console.log(numbers); // [1, 2, 3, 4, 5]
+
+
+
+let evenNumbers = numbers.filter(x => x % 2 === 0);
+
+console.log(evenNumbers); // [2, 4]
+
+console.log(numbers); // [1, 2,
+
+
+
+
+
+
+
+
+
+4) 
+
+
+
+Object.keys(): The Object.keys() method returns an array of a given object's own enumerable property names, in the same order as we get with a normal loop. We can use the length property of the returned array to find the number of properties in the object.
+
+
+
+we can aslo use for loop too
+
+
+
+example:
+
+
+
+let obj = {
+
+  name: "viru",
+
+  age: 23,
+
+  city: "Mysuru"
+
+};
+
+console.log(Object.keys(obj).length); 
+
+
+
+
+
+
+
+5)
+
+a promise is an object that represents the eventual completion (or failure) of an asynchronous operation, and its resulting value. 
+
+
+
+Pending: This is the initial state of a promise. It means that the promise is still in progress, and the value is not yet available.
+Fulfilled: This state indicates that the promise has successfully completed, and the value is now available. The resolve() method is used to fulfill a promise with a value.
+Rejected: This state indicates that the promise has failed, and the value is not available. The reject() method is used to reject a promise with a reason.
+
+
+example:
+
+
+
+let promise = new Promise((resolve, reject) => {
+
+  setTimeout(() => {
+
+    let randomNum = Math.random();
+
+    if (randomNum > 0.5) {
+
+      resolve(randomNum);
+
+    } else {
+
+      reject(new Error("Random number is less than 0.5"));
+
+    }
+
+  }, 1000);
+
+});
+
+
+
+promise.then(result => {
+
+  console.log("Promise fulfilled with value:", result);
+
+}).catch(error => {
+
+  console.log("Promise rejected with reason:", error.message);
+
+});
+
+
+
+
+
+6) 
+
+Promises provide a more organized and readable way of handling asynchronous operations as compared to callbacks. With callbacks, the code can become nested and difficult to read, especially when dealing with multiple asynchronous operations. Promises allow you to chain multiple asynchronous operations together in a more readable and maintainable way, using the then method. Additionally, Promises have a catch method that allows you to handle errors in a more centralized way, rather than having to check for errors at every step in a callback chain.
+
+
+
+
+
+async function is used to indicate that a function is asynchronous and it always returns a promise
+
+await is used inside an async function to wait for a promise to resolve before moving on to the next line of code.

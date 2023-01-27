@@ -1,0 +1,95 @@
+CSS Round 1 - Set 1 Solutions
+
+
+
+
+1) The Box model in CSS refers to the layout of an HTML element, which is defined by the element's content, padding, borders, and margins. The box model is used to calculate the size and position of elements on a web page, and it is the foundation of the layout in CSS. The CSS properties that are a part of the box model include:
+
+width and height, which define the size of the content area
+padding, which adds space around the content
+border, which adds a border around the content and padding
+margin, which adds space outside the border.
+
+
+2) Specificity is a CSS concept that determines which CSS styles will be applied to an element. It is used to resolve conflicts between multiple CSS styles that apply to the same element. Specificity is determined by counting the number of each type of selector used in a CSS rule, with ID selectors having the highest specificity, followed by class selectors, attribute selectors, and element selectors.
+
+
+
+3) To align a block element inside another element, you can use the CSS display property with a value of "inline-block" for the inner element. You can then use the text-align property on the outer element to align the inner element. For example, if you have a div with an id of "outer" and a div with a class of "inner" inside it, you could align the inner element to the center with the following code examples:
+
+
+
+<div id="outer">
+
+ <div class="inner">...</div>       //inner
+
+</div>
+
+
+
+#outer {
+
+ text-align: center;                       //outer
+
+}
+
+.inner {
+
+ display: inline-block;
+
+}
+
+
+
+
+
+
+
+4) Static is the default position value and an element with a static position is not affected by any positioning properties. A relative position element is positioned relative to its default position. An absolute position element is positioned relative to its nearest positioned ancestor, but still preserves the flow of the document. A fixed position element is positioned relative to the browser window and it will stay fixed on the screen even when the page is scrolled.
+
+
+
+5) The CSS property visibility:hidden; will hide an element, but the element will still take up space on the page. The CSS property display:none; will hide an element and the element will not take up any space on the page. So when you use display:none; it will not just hide the element but also remove it from the flow of the web page.
+
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+1) Shadow DOM is a technology that allows web developers to encapsulate their web components, keeping their structure and styles separate from the main document. This allows for better maintainability and reusability of code. An example of using shadow DOM would be to create a custom button element that has its own styles and structure, but can still be used like a regular button element in the main document.
+
+
+
+2) using  border property it can be built 
+
+
+
+.triangle {
+
+ width: 0;
+
+ height: 0;
+
+ border-left: 50px solid transparent;
+
+ border-right: 50px solid transparent;
+
+ border-bottom: 100px solid red;
+
+}
+
+
+
+3) Pseudo elements are used to style specific parts of an element. They are defined using a double colon (::) followed by the name of the pseudo element. Examples include ::before and ::after, which allow you to add content before or after an element, and ::first-letter and ::first-line, which allow you to style the first letter or line of an element.
+
+
+
+4) Data attributes are used to store custom data private to the page or application, for which there are no more appropriate attributes or elements. They can be used to store data in a way that is semantic, and that can be easily selectable using CSS and JavaScript. Data attributes are defined using the "data-" prefix, followed by the name of the attribute.
+
+
+
+
+

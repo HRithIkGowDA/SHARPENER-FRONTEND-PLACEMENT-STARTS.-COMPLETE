@@ -1,0 +1,33 @@
+Javascript Round 1 - SET 1-Solutions
+
+
+1) let and const are similar in their scoping behaviour, but const is used for variables that cannot be reassigned, while let can be reassigned and var is function scoped, while let and const are block scoped.
+
+
+
+2) 0,1,2,3,4,5 (inc timeout )
+
+
+
+3) b,a (inc timeout )
+
+
+
+4) simple , by using promise
+
+
+
+new Promise(resolve => {
+
+ console.log("a");
+
+ resolve();
+
+}).then(() => {
+
+ console.log("b");
+
+});
+
+
+

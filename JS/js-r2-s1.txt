@@ -1,0 +1,41 @@
+Javascript Round 2 - SET 1-SOLUTIONS
+
+
+1) 	 third
+
+ 		first
+
+ 		second
+
+
+
+
+
+2) The main difference between the two is the order in which they are executed. process.nextTick is executed before any other I/O events, while setImmediate is executed after I/O events have been processed. This means that process.nextTick is generally used for non-blocking operations that need to be executed as soon as possible, while setImmediate is used for operations that can be delayed slightly.
+
+
+
+3)
+
+ Promises have a built-in way to handle errors, whereas in callbacks, errors are usually passed as the first argument to the callback function.
+Promises can be chained together, allowing for more complex and readable asynchronous code, while callbacks often lead to the "callback hell" problem.
+Promises are more composable and reusable than callbacks
+
+
+
+
+4) Something went wrong
+
+
+
+
+
+5) 	second
+
+		first
+
+
+
+
+
+6) A function is a block of code that can be executed when it is called. A function definition is the way in which a function is created and given a name.

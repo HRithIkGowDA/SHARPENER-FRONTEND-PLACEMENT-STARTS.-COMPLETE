@@ -1,0 +1,133 @@
+Javascript Round 3 - SET 4-SOLUTIONS
+
+
+1)
+
+Using the object literal notation: This is the most basic and common way of creating an object in JavaScript
+Using the object constructor: The Object constructor is a built-in function in JavaScript that is used to create an object
+Using the object.create() method: This method creates an object with the specified prototype object and properties
+
+
+2) Object prototype methods are methods that are available on all objects in JavaScript. They include methods like toString(), valueOf(), hasOwnProperty(), etc. These methods are defined on the Object.prototype object and are inherited by all objects in JavaScript.
+
+
+
+
+
+3) Object chaining is a technique in JavaScript where multiple methods are called on an object one after the other, in a single line of code.
+
+
+
+let car = {
+
+ make: "Toyota",
+
+ model: "Maruti",
+
+ year: 2023,
+
+ getMake: function() {
+
+  return this.make;
+
+ },
+
+ getModel: function() {
+
+  return this.model;
+
+ },
+
+ getFullName: function(){
+
+  return `${this.getMake()} ${this.getModel()}`
+
+ }
+
+}
+
+console.log(car.getFullName().toUpperCase())
+
+
+
+car.getFullName().toUpperCase() is an example of object chaining, first calling the getFullName() method on the car object, which in turn calls the getMake() and getModel() method and then calling the toUpperCase() method on the returned string.
+
+
+
+4)
+
+The main difference between a fat arrow function (also known as an arrow function) and a normal function in JavaScript is the way the this keyword is bound.
+
+
+
+In a normal function, the value of this is determined by how the function is called. If a function is called as a method of an object, then this refers to the object. If a function is called as a standalone function, then this refers to the global object.
+
+
+
+In contrast, the this value in a fat arrow function is determined by the surrounding scope. It is lexically bound, meaning that it inherits the this value of the enclosing context.
+
+
+
+5)
+
+
+
+ let obj = {
+
+ normalFunc: function() {
+
+  console.log(this);
+
+ },
+
+ arrowFunc: () => {
+
+  console.log(this);
+
+ }
+
+}
+
+
+
+obj.normalFunc(); // Output: Object {normalFunc: function, arrowFunc: ƒ}
+
+obj.arrowFunc(); // Output: Window {...}
+
+
+
+6) Advantages of Axios over other competitors:
+
+Axios automatically transforms the JSON data to JavaScript objects, whereas other libraries like fetch require additional parsing.
+Axios supports older browsers, whereas some other libraries like fetch require polyfills.
+Axios provides a way to cancel requests, whereas other libraries like fetch do not.
+Axios provides a way to set base url, headers and interceptors, whereas other libraries like fetch do not.
+Axios supports request and response interceptors, whereas other libraries like fetch do not.
+Axios can make both http and https requests, whereas other libraries like fetch can only make http requests.
+
+
+7) A closure is a function that has access to variables in its parent scope, even after the parent function has returned.
+
+
+
+function outerFunction(x) {
+
+ let innerVar = x;
+
+ return function innerFunction() {
+
+  console.log(innerVar);
+
+ }
+
+}
+
+
+
+let closureFunc = outerFunction(10);
+
+console.log(closureFunc()); // Output: 10
+
+
+
+the inner function innerFunction has access to the variable innerVar defined in the parent function outerFunction. Even after the outerFunction has returned, the inner function can still access the variable innerVar

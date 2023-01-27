@@ -1,0 +1,563 @@
+Javascript Round 3 - SET 2-SOLUTIONS
+
+
+
+
+1)
+
+ES6, also known as ECMAScript 6 or ECMAScript 2015, introduced several new features to the JavaScript language. Some of the most notable new features include:
+
+
+
+
+
+let and const: These are new ways to declare variables in JavaScript. let allows you to declare a variable with block scope, while const creates a constant variable that cannot be reassigned.
+example:
+
+let x = 10;
+
+console.log(x); // outputs 10
+
+x = 20;
+
+console.log(x); // outputs 20
+
+
+
+const y = 30;
+
+console.log(y); // outputs 30
+
+y = 40; // this will throw an error, as y is a constant variable and cannot be reassigned
+
+
+
+
+
+
+
+Arrow functions: A shorthand for writing anonymous function expressions. They are similar to lambda function in some other programming languages.
+
+
+example:
+
+
+
+// Traditional function
+
+function add(a, b) {
+
+ return a + b;
+
+}
+
+
+
+// Arrow function equivalent
+
+const add = (a, b) => a + b;
+
+
+
+console.log(add(3, 4)); // outputs 7
+
+
+
+
+
+
+
+
+
+Template literals: A new way to create strings that makes it easier to include expressions and create multi-line strings.
+
+
+example:
+
+
+
+const firstName = "viru";
+
+const lastName = "Gowda";
+
+
+
+// Traditional string concatenation
+
+console.log("My name is " + firstName + " " + lastName + ".");
+
+
+
+// Template literal equivalent
+
+console.log(`My name is ${firstName} ${lastName}.`);
+
+
+
+
+
+
+
+
+
+Destructuring: A convenient way to extract values from arrays and objects and assign them to variables.
+
+
+example:
+
+
+
+const person = {
+
+ firstName: "viru",
+
+ lastName: "gowda",
+
+ age: 23,
+
+ address: {
+
+  city: "mysuru"
+
+  
+
+ }
+
+};
+
+
+
+
+
+// Destructuring 
+
+const { firstName: first, lastName: last, age, address: { city } } = person;
+
+console.log(first, last, age,, city, );
+
+
+
+
+
+
+
+
+
+Classes: A new syntax for creating objects and defining their methods, similar to classes in other object-oriented languages.
+
+
+example:
+
+
+
+class Person {
+
+ constructor(firstName, lastName, age) {
+
+  this.firstName = firstName;
+
+  this.lastName = lastName;
+
+  this.age = age;
+
+ }
+
+
+
+ getFullName() {
+
+  return `${this.firstName} ${this.lastName}`;
+
+ }
+
+}
+
+
+
+const john = new Person("viru", "gowda", 23);
+
+console.log(john.getFullName()); 
+
+
+
+
+
+
+
+
+
+Modules: A new way to organize and reuse code in JavaScript, using import and export statements.
+
+
+example:
+
+
+
+// math.js
+
+export const add = (a, b) => a + b;
+
+export const subtract = (a, b) => a - b;
+
+
+
+// main.js
+
+import { add, subtract } from './math.js';
+
+
+
+console.log(add(3, 4)); // Outputs 7
+
+console.log(subtract(10, 4)); // Outputs 6
+
+
+
+
+
+
+
+
+
+Promises: A way to handle asynchronous operations and chaining multiple asynchronous operations together.
+
+
+example:
+
+
+
+const wait = ms => {
+
+ return new Promise((resolve, reject) => {
+
+  setTimeout(() => {
+
+   resolve("done");
+
+  }, ms);
+
+ });
+
+};
+
+
+
+wait(1000)
+
+ .then(result => {
+
+  console.log(result); // Outputs 'done'
+
+ })
+
+ .catch(error => {
+
+  console.log(error);
+
+ });
+
+
+
+
+
+Default parameters: A way to set default values for function parameters if no value is provided.
+example:
+
+
+
+const sum = (a = 1, b = 2) => a + b;
+
+console.log(sum()); // Outputs 3
+
+console.log(sum(3)); // Outputs 5
+
+console.log(sum(3, 4)); // Outputs 7
+
+
+
+
+
+
+
+
+
+Spread operator: A way to expand an array or object into individual elements or properties.
+example:
+
+
+
+const numbers = [1, 2, 3];
+
+const newNumbers = [...numbers, 4, 5];
+
+console.log(newNumbers); // Outputs [1, 2, 3, 4, 5]
+
+
+
+
+
+
+
+Rest parameters: A way to gather remaining function arguments into an array.
+example:
+
+
+
+function sum(a, b, ...rest) {
+
+ let result = a + b;
+
+ for (let num of rest) {
+
+  result += num;
+
+ }
+
+ return result;
+
+}
+
+console.log(sum(1, 2, 3, 4, 5)); // Outputs 15
+
+
+
+
+
+
+
+2)
+
+call method is used to invoke a function and sets the this keyword inside the function to the first argument passed to the call method. The remaining arguments are passed as individual parameters to the function
+
+
+
+example:
+
+
+
+const person = {
+
+ name: "viru",
+
+ greet: function(greeting) {
+
+  console.log(`${greeting}, ${this.name}`);
+
+ }
+
+};
+
+
+
+person.greet("Hello"); // Outputs "Hello, viru"
+
+
+
+const anotherPerson = { name: "radha" };
+
+person.greet.call(anotherPerson, "Hi"); // Outputs "Hi, radha"
+
+
+
+
+
+
+
+apply method is similar to the call method, but it allows you to pass an array of arguments to the function.
+
+
+
+example:
+
+
+
+const numbers = [2, 3, 4];
+
+console.log(Math.max.apply(null, numbers)); // Outputs 4
+
+
+
+
+
+bind method creates a new function that, when called, has its this keyword set to the first argument passed to the bind method. The remaining arguments are passed as individual parameters to the new function
+
+
+
+example;
+
+
+
+const person = {
+
+ name: "viru",
+
+ greet: function(greeting) {
+
+  console.log(`${greeting}, ${this.name}`);
+
+ }
+
+};
+
+
+
+const anotherPerson = { name: "radha" };
+
+const greetRadha = person.greet.bind(anotherPerson);
+
+greetRadha("Hello"); // Outputs "Hello, radha"
+
+
+
+
+
+
+
+3)
+
+Different ways to store data in browser are:
+
+Cookies: These are small text files that are stored on the user's computer by the browser. They can be used to store small pieces of data, such as a user's preferences or login information.
+Local Storage: This API provides a way to store key-value pairs of data on the client-side. It provides more storage space than cookies and data stored in Local storage is not sent to server on every request.
+Session Storage: Similar to Local storage but the data is deleted when the browser is closed.
+IndexedDB: This is a NoSQL database that can store large amounts of structured data on the client side.
+
+
+Cookies are useful when you want to store small amounts of data and you need that data to be sent back to the server with every request. Local storage and session storage are useful when you want to store more data on the client side, but don't need it to be sent back to the server. IndexedDB is useful when you need to store large amounts of structured data on the client side, and you need more advanced querying capabilities than local storage provides.
+
+
+
+
+
+4)A generator function is a special type of function that can be paused and resumed at any point. A generator function is defined using the function* syntax, and it returns a generator object, which is an iterator that can be used to iterate over the values produced by the generator function.
+
+A normal function, on the other hand, is executed from start to finish, and it can only return a single value or throw an exception.
+
+
+
+The main difference between generator function and normal function is that a generator function can be paused and resumed at any point, whereas a normal function runs to completion.
+
+Another difference is that normal function can only return single value or throw an exception, on the other hand generator function can yield multiple values using yield statement. 
+
+
+
+example:
+
+
+
+function* countUpFrom(start) { //generator function
+
+ let count = start;
+
+ while (true) {
+
+  yield count;
+
+  count++;
+
+ }
+
+}
+
+
+
+const counter = countUpFrom(5);
+
+console.log(counter.next().value); // Outputs 5
+
+console.log(counter.next().value); // Outputs 6
+
+console.log(counter.next().value); // Outputs 7
+
+
+
+5)
+
+Array.prototype.forEach() is a method that can be called on an array to iterate over its elements and perform a specific operation on each element. It does not return any value.
+
+
+
+Array.prototype.map() is a method that can be called on an array to create a new array with the results of calling a provided function on every element in the calling array.
+
+
+
+Array.prototype.filter() is a method that can be called on an array to create a new array with all elements that pass the test implemented by the provided function.
+
+
+
+example:
+
+
+
+const numbers = [1, 2, 3, 4, 5];
+
+
+
+// forEach
+
+numbers.forEach((num) => {
+
+ console.log(num * 2);
+
+});
+
+// Output: 2, 4, 6, 8, 10
+
+
+
+// map
+
+const doubledNumbers = numbers.map((num) => {
+
+ return num * 2;
+
+});
+
+console.log(doubledNumbers); // Output: [2, 4, 6, 8, 10]
+
+
+
+// filter
+
+const evenNumbers = numbers.filter((num) => {
+
+ return num % 2 === 0;
+
+});
+
+console.log(evenNumbers); // Output: [2, 4]
+
+
+
+forEach method is used for iterating over the array and perform some operation on it, map method is used for creating new array with some operation on it and filter method is used for filtering some elements from the array and creating new array with that.
+
+
+
+6)Array.prototype.reduce() is a method that can be called on an array to reduce the array to a single value. The reduce method takes a callback function as an argument and applies this function to each element in the array, accumulating a result
+
+
+
+example:
+
+
+
+const numbers = [1, 2, 3, 4, 5];
+
+
+
+const sum = numbers.reduce((accumulator, currentValue) => {
+
+ return accumulator + currentValue;
+
+}, 0);
+
+console.log(sum); // Output: 15
+
+
+
+reduce method is used for reducing an array to a single value by applying a callback function on each element of the array and accumulating the result
+
+
+
+
+

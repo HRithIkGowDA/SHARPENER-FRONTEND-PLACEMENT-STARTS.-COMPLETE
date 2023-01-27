@@ -1,0 +1,54 @@
+HTML Round 1 - Set 3 Solutions
+
+
+1) Web storage in HTML5 allows web pages to store data locally within the user's browser. This can be useful for storing data such as user preferences, form data, and shopping cart information. There are two types of web storage: local storage and session storage. Local storage stores data with no expiration date, while session storage stores data for one session only and is deleted when the browser is closed.
+
+
+
+2) In HTML5, the <header> tag is used to define a container for introductory content or a set of navigational links. The <h1> tag, which is used to define a heading, is now considered a descendant of the <header> tag, rather than a sibling. This new relationship between the <header> and <h1> tags is meant to improve the semantic meaning of the code.
+
+
+
+3) Some new tags in media elements in HTML5 include: <audio>, <video>, <source>, <track>, and <canvas>. These tags allow for the easy integration of audio and video content, as well as 2D drawing, into web pages.
+
+
+
+4) The addition of drag-and-drop functionality in HTML5 allows for a more intuitive user interface and can improve the overall user experience. To make an image draggable in HTML5, the "draggable" attribute would need to be added to the <img> tag, and JavaScript event listeners would need to be added for the draggable events.
+
+
+
+5) Web Workers are a new feature in HTML5 that allows JavaScript to run in the background, separate from the main thread of the web page. This allows for more complex JavaScript applications without freezing the user interface.
+
+
+
+6)There are several ways to make an image responsive, such as using CSS media queries, the "max-width" property, and the "width" property with a value of "100%". Another approach is to use the "object-fit" property which allows to specify how an <img> or <video> should be resized to fit its container.
+
+
+
+7) A manifest file in HTML5 is a simple text file that lists all of the files that the browser should cache for offline use. This allows web pages to continue to function even when the user is not connected to the internet.
+
+
+
+8) LocalStorage and SessionStorage are both types of web storage in HTML5, but they differ in how long the stored data lasts. LocalStorage stores data with no expiration date and will remain even after the browser is closed. SessionStorage stores data for one session only and is deleted when the browser is closed.
+
+
+
+9) Cookies are small text files that are stored on a user's computer by a website. They are used to remember user preferences, login information, and other data. They should be used when it's necessary to save data on client side, but should not be used to store sensitive information as it's vulnerable to cross-site scripting attacks.
+
+
+
+10) Specificity in CSS refers to the weight assigned to different CSS selectors, which determines which styles will be applied to an element. The more specific a selector is, the higher its specificity and the more likely it is to be applied.
+
+
+
+11) There are three types of CSS that can be included in HTML: inline styles, internal stylesheets, and external stylesheets.
+
+
+
+12) A style sheet is a document written in CSS that describes the presentation of a markup language document such as HTML.
+
+
+
+13) The layout of HTML refers to the structure and organization of the elements on a web page. The layout is typically divided into several sections, such as the header, navigation, main content, and footer.
+
+The header is usually placed at the top of the page and contains information such as the website's logo and title, as well as any other global navigation elements. The navigation section is typically located next to the header and contains links to other pages or sections of the website. The main content of the page, such as text and images, is typically placed in the center of the page. Finally, the footer is typically located at the bottom of the page and contains information such as copyright information, contact information, and links to other pages or resources.

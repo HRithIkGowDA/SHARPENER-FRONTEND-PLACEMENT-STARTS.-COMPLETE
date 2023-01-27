@@ -1,0 +1,69 @@
+HTML Round 1 - Set 1 Solutions:
+
+
+
+
+1) No, HTML tags and elements are not the same thing. HTML tags are the keywords or labels that indicate the start and end of an HTML element. Elements are the parts of an HTML document that are enclosed by tags. For example, the "p" tag is used to create a paragraph element, and the "img" tag is used to create an image element. The content inside the tags is considered the element.
+
+
+
+2) In HTML, tags are keywords or labels that indicate the start and end of an HTML element. Attributes provide additional information about an element and are used to define its properties and functions. For example, the "src" attribute is used to define the source of an image in an "img" tag.
+
+
+
+3) Void elements are self-closing HTML tags that do not require a closing tag. These elements do not have any content and do not affect the layout of the page. Examples of void elements include "br", "hr", and "img".
+
+
+
+4) There are three types of lists in HTML: unordered lists (ul), ordered lists (ol), and definition lists (dl). Unordered lists use bullet points to organize a list of items, ordered lists use numbers or letters to organize a list of items, and definition lists are used to organize a list of terms and their definitions.
+
+
+
+
+
+5) The "class" attribute is used to define a specific class for an HTML element. It allows elements to be selected by CSS and JavaScript to apply styles and perform actions. The "id" attribute is also used to define a specific element, but it is unique to the page and can only be used once.
+
+
+
+
+
+6)  One way to optimize website assets loading is to use a Content Delivery Network (CDN) to distribute assets to users from a location that is closest to them. Additionally, compressing images, minifying CSS and JavaScript files, and using browser caching can also help to improve load times.
+
+
+
+
+
+7)  The <strong> tag is used to indicate text that is of higher importance than the surrounding text, while the <b> tag is used to indicate text that is visually different but does not convey any additional importance. The <em> tag is used to indicate text that is emphasized, while the <i> tag is used to indicate text that is in an alternate voice or style.
+
+
+
+
+
+8) The <head> tag is used to contain information about the document that is not displayed on the page, such as the title and meta data. The <body> tag is used to contain the content that is displayed on the page.
+
+
+
+
+
+9) It is possible to display a web page inside a web page by using the <iframe> element.
+
+
+
+
+
+10)  Inline elements are elements that only take up as much width as necessary, such as the <span> and <a> tags. Block-level elements take up the full width of their container, such as the <div> and <p> tags.
+
+
+
+
+
+11) There are several ways to position an HTML element, including using the "static," "relative," "absolute," and "fixed" values of the "position" attribute. "Static" is the default value and elements will be positioned according to their normal flow on the page. "Relative" positions the element relative to its normal position. "Absolute" positions the element relative to the nearest positioned ancestor, but removes it from the normal flow of the page. "Fixed" positions the element relative to the browser window and it will remain in the same place even if the page is scrolled.
+
+
+
+12) Each one of the position attribute values have different impacts on the elements positioning based on the normal flow of the page and other elements positions. "Static" keeps the element as it is in the normal flow, "relative" positions the element relative to it's normal position, "absolute" positions the element relative to the nearest positioned ancestor and removes it from the normal flow and "fixed" positions the element relative to the browser window and it will remain in the same place even if the page is scrolled.
+
+
+
+
+

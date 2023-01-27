@@ -1,0 +1,99 @@
+Javascript Round 3 - SET 1-SOLUTIONS
+
+
+1)Async/await is used to handle asynchronous code, which means code that may take some time to complete, such as fetching data from a server or reading a file. It allows you to write asynchronous code that looks and behaves like synchronous code, making it easier to read and understand.
+
+
+
+
+
+2) The reason behind writing await inside an async function only is because the await keyword can only be used within an async function. It is used to pause the execution of the async function until the promise is resolved. If it were used outside of an async function, it would throw a syntax error.
+
+
+
+
+
+3)The output of the code would be 'a', 'b', 'e', 'c', 'd'. This is because the async function continues to execute while the setTimeout callbacks are waiting, so it logs 'a' and 'b' immediately, then 'e' before the setTimeout callbacks log 'c' and 'd'.
+
+
+
+
+
+4) To solve this problem, we could wrap the setTimeout callbacks in their own promises and use the await keyword before each of them. For example
+
+
+
+async fun fun1(){
+
+ console.log('a');
+
+ console.log('b');
+
+ await new Promise(resolve => setTimeout(() => {console.log('c'); resolve()}, 1000));
+
+ await new Promise(resolve => setTimeout(() => {console.log('d'); resolve()}, 0));
+
+ console.log('e');
+
+}
+
+
+
+
+
+
+
+
+
+5) Callbacks are functions that are passed as an argument to another function and are executed after the function they were passed to completes. Callback hell is a term used to describe the problem of having multiple nested callback functions, making the code difficult to read and understand.
+
+
+
+
+
+getData(function(data) {
+
+ processData(data, function(processedData) {
+
+  displayData(processedData, function(displayedData) {
+
+   // example for a callback hell
+
+  });
+
+ });
+
+});
+
+
+
+
+
+6) Promises are a more superior alternative to callbacks as they provide a more structured and readable way to handle asynchronous code. They also provide a way to handle errors and can be chained together. Promises solve the issue of callback hell by allowing asynchronous code to be written in a more linear and readable way, rather than nested within multiple callbacks.
+
+
+
+for example the above code can be modified to below
+
+
+
+getData()
+
+ .then(data => processData(data))
+
+ .then(processedData => displayData(processedData))
+
+ .then(displayedData => {
+
+  // modified
+
+ })
+
+ .catch(error => {
+
+  // handle error
+
+ });
+
+
+

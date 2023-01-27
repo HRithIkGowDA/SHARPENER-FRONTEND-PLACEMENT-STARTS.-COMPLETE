@@ -1,0 +1,124 @@
+Javascript Round 3 - SET 3-SOLUTIONS
+
+
+
+
+1) The == operator compares values for equality and performs type coercion if needed. The === operator compares values for equality without performing type coercion.
+
+
+
+2) null and undefined are both used to represent missing or unknown values. However, undefined is the default value of a variable that has been declared but not assigned a value, while null is explicitly assigned to a variable to indicate that it has no value.
+
+
+
+3) The first console.log() statement will output false because null and undefined are not the same value when using the === operator. The second console.log() statement will output true because when using the == operator, null and undefined are considered to be equal.
+
+
+
+4)
+
+Event bubbling is the concept of an event propagating up through the DOM tree. When an event is fired on a specific element, the event propagates up through its parent elements, all the way up to the document object.
+
+
+
+example:
+
+
+
+<form id="form">
+
+ <div id="div">
+
+  <button id="button">Click Me</button>
+
+ </div>
+
+</form>
+
+
+
+document.getElementById("form").addEventListener("click", function(){
+
+ alert("form clicked");
+
+});
+
+document.getElementById("div").addEventListener("click", function(){
+
+ alert("div clicked");
+
+});
+
+document.getElementById("button").addEventListener("click", function(){
+
+ alert("button clicked");
+
+});
+
+
+
+
+
+
+
+Event capturing is the concept of an event propagating down through the DOM tree. When an event is fired on the document object, it propagates down through the DOM tree, and is first fired on the outermost elements, and then on the innermost elements.
+
+
+
+
+
+The main difference between them is the order in which the events are fired. In bubbling, it starts from the innermost element and propagates to the outermost element. While in capturing, it starts from the outermost element and propagates to the innermost element.
+
+
+
+
+
+5)
+
+Function currying is a technique in functional programming where a function is broken down into a series of functions that each take a single argument. The returned function from one function call is then called with the next argument and so on, until all of the arguments have been passed. The final function call returns the result of the computation
+
+.
+
+example:
+
+
+
+function multiply(a) {
+
+ return function(b) {
+
+  return a * b;
+
+ }
+
+}
+
+let multiplyBy5 = multiply(5);
+
+console.log(multiplyBy5(3)) // 15
+
+
+
+multiply function returns a function which when called with b, returns the product of a and b. By calling multiply(5) we are creating a new function multiplyBy5 which is a partially applied function, which takes one argument and returns the product of 5 and the passed argument.
+
+
+
+
+
+6)
+
+An IIFE (Immediately Invoked Function Expression) is a function that is defined and immediately invoked in the same line of code. It is often used to create a scope for variables and functions, so that they don't pollute the global scope
+
+
+
+(function () {
+
+ var message = "Hello";
+
+ console.log(message);
+
+})(); 
+
+
+
+i have defined an anonymous function and immediately invoked it. The function is executed as soon as the script is loaded, and the variable message is only accessible within the scope of the function, so it does not pollute the global scope.

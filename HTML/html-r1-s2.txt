@@ -1,0 +1,53 @@
+HTML Round 1 - Set 2
+
+
+1) The difference between position absolute and relative is that an element with "position: absolute" is positioned relative to the nearest positioned ancestor, but is removed from the normal flow of the page. An element with "position: relative" is positioned relative to its default position, and stays within the normal flow of the page.
+
+
+
+2) There are several ways to display HTML elements, including using the "display" property, such as "block" or "inline", the "visibility" property, such as "visible" or "hidden", and the "opacity" property to control the transparency of an element.
+
+
+
+3) "display: none" completely hides an element and removes it from the layout of the page, while "visibility: hidden" only hides the element but keeps it in the layout of the page, taking up the same space as before.
+
+
+
+4) To specify a link in the HTML '<a>' tag, you use the "href" attribute to specify the URL of the linked page. The "target" attribute specifies where the linked page will open, such as in the same window (_self), a new window (_blank), or in a named frame (_parent or _top).
+
+
+
+5) Styles can be specified for an HTML element in several ways, including inline styles using the "style" attribute, internal styles using a '<style>' element within the '<head>' of the document, and external styles using a '<link>' element to link to a separate CSS file.
+
+
+
+6) The <link> tag is used to link to external resources such as CSS or JavaScript files, while the <a> tag is used to create links to other pages or sections within the same page.
+
+
+
+7) Scripts should be placed in the <head> of the document if they are needed to run before the page finishes loading, such as scripts that affect the layout or functionality of the page. Scripts can be placed in the <body> if they do not need to run until after the page has finished loading.
+
+
+
+8) Forms are used to gather user input and can be created using the <form> element. The default behavior of a form is to send the input data to the server when the user submits the form.
+
+
+
+9) Events in HTML can be handled using JavaScript or jQuery, using event listeners such as "onclick" or "onload" to execute a function when a specific event occurs.
+
+
+
+10) Some of the advantages of HTML5 over previous versions include improved semantic markup, better multimedia support, and new form controls.
+
+
+
+11) Audio and video can be included in a webpage using the <audio> and <video> elements, respectively, and can be controlled using JavaScript or HTML attributes such as the "controls" attribute.
+
+
+
+12) Semantic elements are HTML elements that provide meaning to the structure of the webpage. Examples include <header>, <nav>, <main> etc. They are used to specify the type of content contained in an element.
+
+
+
+13) The significant goals of the HTML5 specification include providing a more semantically rich set of elements for web developers, enabling the creation of more interactive and dynamic web experiences, and making it easier to develop web applications that work offline.
+
