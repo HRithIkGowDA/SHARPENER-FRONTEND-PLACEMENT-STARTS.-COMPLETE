@@ -1,0 +1,78 @@
+React JS Round 2 - SET 4 -Redux- Solutions
+
+
+
+
+1)In Redux's architecture, actions are plain JavaScript objects that describe an event that has occurred in the application. They are the only way to send information from the application to the store. An example of an action in a to-do list application could be a user adding a new task, which would be represented by an action object that contains the task's text and a type property set to "ADD_TASK".
+
+
+
+
+
+2) Reducers in Redux's architecture are pure functions that take in the current state of the application and an action, and return a new state. They are responsible for updating the state of the application based on the action that was dispatched. An example of a reducer in a to-do list application could be a function that takes in the current state (an array of tasks) and an action (an object with a type of "ADD_TASK" and a payload of the task's text), and returns a new state with the task added to the array
+
+
+
+3) In an application made using React and Redux, the typical data flow is as follows:
+
+The user interacts with a React component, which dispatches an action.
+The action is sent to all the reducers in the application.
+The reducers update the state of the application based on the action.
+The updated state is sent to the store.
+The React components that need the updated state as props re-render with the new data.
+The user sees the updated view on the screen.
+This is the basic flow of Redux lifecycle in an application.
+
+
+
+4)The Redux Store has the following methods:
+
+store.getState(): This method returns the current state of the store.
+store.dispatch(action): This method dispatches an action to the store, which triggers the reducers to update the state based on the action.
+store.subscribe(listener): This method allows you to register a listener function that will be called every time the state is updated.
+store.replaceReducer(nextReducer): This method allows you to replace the current reducer with a new one.
+Examples:
+
+store.getState() can be used to access the current state of the store.
+store.dispatch(action) can be used to send information from the application to the store.
+store.subscribe(listener) can be used to update the component state based on the store state.
+store.replaceReducer(nextReducer) can be used to change the current reducer with a new one.
+
+
+5) To set the initial state in Redux, you can pass an initial state as an argument to the createStore() function.
+
+
+
+6) The connect() function is a higher-order component that connects a React component to the Redux store. It allows a component to access the state of the store and dispatch actions.
+
+
+
+7) The Redux store can be accessed outside a React component by importing the store directly.
+
+
+
+
+
+8) A reducer is a pure function that takes in the current state and an action, and returns a new state. Therefore, there are certain things that should never be done inside a reducer:
+
+Mutating the state directly. Instead, a new state object should be created and returned.
+Performing side-effects such as API calls or logging. This should be handled by middlewares.
+Using non-pure functions such as Math.random() or Date.now().
+Using the state from previous iterations.
+
+
+
+
+9) Middlewares in Redux are functions that can be added between the dispatching of an action and the updating of the state. They are used to handle side-effects such as API calls, logging, and error handling. They can also be used to modify the action or state before it reaches the reducer. Examples of middlewares are:
+
+redux-thunk: allows you to write action creators that return a function instead of an action.
+redux-logger: logs all actions and the state before and after they are processed by the reducer.
+redux-saga: allows you to handle side effects and asynchronous code in a more organized way.
+Middlewares are implemented by applying them to the store using the store's applyMiddleware() method.
+
+
+
+
+
+
+

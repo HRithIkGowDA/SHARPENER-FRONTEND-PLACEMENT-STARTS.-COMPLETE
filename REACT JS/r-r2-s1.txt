@@ -1,0 +1,129 @@
+React JS Round 2 - SET 1 - Solutions
+
+
+1) React Router is a library for React that allows developers to handle client-side routing. It allows for different components to be rendered based on the current URL. It should be used when creating a single-page app in React that needs to handle multiple pages and URLs.
+
+
+
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+
+
+
+function App() {
+
+ return (
+
+  <Router>
+
+   <div>
+
+    <nav>
+
+     <ul>
+
+      <li>
+
+       <Link to="/">Home</Link>
+
+      </li>
+
+      <li>
+
+       <Link to="/about">About</Link>
+
+      </li>
+
+      <li>
+
+       <Link to="/users">Users</Link>
+
+      </li>
+
+     </ul>
+
+    </nav>
+
+
+
+    <Route path="/" exact component={Home} />
+
+    <Route path="/about" component={About} />
+
+    <Route path="/users" component={Users} />
+
+   </div>
+
+  </Router>
+
+ );
+
+}
+
+
+
+
+
+In this example, it has  a navigation menu with three links: "Home", "About", and "Users". When a user clicks on one of these links, the <Route> component will check the current URL and render the appropriate component (e.g. Home, About, Users).
+
+
+
+2)  One way to pass data between sibling components using React Router is to use the useContext hook. We can create a context and provide it to both components, then one component can update the context and the other can consume the updated value.
+
+
+
+3) useCallback is a hook that allows you to memoize a callback function. When you pass a callback function to a component, React will re-create the function on every render. This can lead to performance issues. Using useCallback will prevent the function from being re-created on every render, and instead will only re-create the function if one of its dependencies has changed.
+
+
+
+ 
+
+4) useMemo is a hook that allows you to memoize a value. Like useCallback, it can prevent unnecessary re-renders and improve performance. useMemo will only re-compute the memoized value if one of its dependencies has changed.
+
+
+
+ const expensiveComputation = useMemo(() => {
+
+ let sum = 0;
+
+ for (let i = 0; i < props.largeArray.length; i++) {
+
+  sum += props.largeArray[i];
+
+ }
+
+ return sum;
+
+}, [props.largeArray]);
+
+
+
+
+
+
+
+
+
+5)  React.memo is a higher-order component that allows you to memoize a component. It works similar to useMemo, but it is used for components instead of values. useMemo is a hook version of React.memo.
+
+
+
+
+
+6)  The Context API allows you to share state and props between components without having to pass them down through every level of the component tree. This can make your code more organized and easier to understand. It should be used when you have a piece of state or props that need to be shared between multiple components that are not directly related through the component tree.
+
+
+
+The Context API works by creating a context object with a provider and consumer component. The provider component holds the state or props that you want to share, and the consumer component can access that state or props by being a descendant of the provider.
+
+
+
+
+
+7)  Babel is a JavaScript compiler that allows you to use the latest JavaScript features even if not all browsers support them yet. It can convert newer JavaScript code (such as JSX) into an older version of JavaScript that most browsers can understand. This allows developers to use the latest features and syntax without worrying about compatibility issues. It can also be used to make your code compatible with different environments like Node.js, React Native, and others.
+
+
+
+
+
+
+

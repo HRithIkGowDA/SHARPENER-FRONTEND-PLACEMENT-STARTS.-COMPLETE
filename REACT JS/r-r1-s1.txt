@@ -1,0 +1,89 @@
+React JS Round 1 - SET 1 - Solutions
+
+
+1) React is a JavaScript library for building user interfaces. It allows developers to build reusable UI components and manage the state and behavior of those components. Some advantages of using React over plain JavaScript include a virtual DOM that improves performance by reducing the amount of DOM manipulation required, a component-based architecture that makes it easy to organize and reason about the code, and a strong developer community and ecosystem.
+
+
+
+2) A library is a collection of pre-written code that developers can use to perform common tasks. A framework, on the other hand, is a set of conventions and tools that provide a structure for building a application. React is a library because it focuses on providing a set of tools for building UI components, rather than dictating the entire structure of an application.
+
+
+
+3) useState is a hook in React that allows a component to manage and update its own state. It takes a single argument, which is the initial state, and returns an array with two elements: the current state, and a function to update the state
+
+
+
+import { useState } from 'react';
+
+
+
+function Counter() {
+
+ const [count, setCount] = useState(0);
+
+
+
+ return (
+
+  <>
+
+   <p>Count: {count}</p>
+
+   <button onClick={() => setCount(count + 1)}>Increment</button>
+
+  </>
+
+ );
+
+}
+
+
+
+
+
+useState(0) is called and it returns an array [count, setCount] where count is the current state and setCount is the function to update the state.
+
+
+
+4) State variables in React are variables that are used to store and manage the state of a component. They are different from normal variables in that they trigger a re-render of the component when they are updated, allowing the component to reflect changes in its state. When deciding whether to use state variables or normal variables, it's important to consider whether the variable's value will be used to update the component's UI. If so, it should be a state variable, if not, a normal variable is enough.
+
+
+
+5) a key is a special attribute that is used to identify elements in a list of items. It is used to help React keep track of which items have been added, removed, or re-ordered, so that it can efficiently update the UI. Keys should be unique and stable, meaning they should not change as the list of items updates. The advantage of using keys is that it allows React to update the UI more efficiently by minimizing the amount of DOM manipulation required.
+
+
+
+6) JSX is a syntax extension for JavaScript that allows developers to write HTML-like elements in their JavaScript code. It is used in React to define the structure and content of a component's UI. When a component using JSX is rendered, the JSX is transpiled into JavaScript, which creates the actual HTML elements that are added to the DOM. JSX allows developers to express the structure of a component's UI in a way that is more familiar and intuitive than writing JavaScript code to create the elements.
+
+
+
+
+
+7) The Document Object Model (DOM) is a programming interface for HTML and XML documents. It represents the structure of a document as a tree-like object, with each element of the document (such as a paragraph or an image) represented as a node in the tree. The DOM allows developers to programmatically access and manipulate the content and structure of a document.
+
+
+
+The virtual DOM is a concept used by React to improve the performance of updating the UI. It is a lightweight representation of the actual DOM, and it keeps track of the changes made to the UI
+
+
+
+React uses the virtual DOM to render the UI by creating a new virtual DOM tree when the component's state changes. It then compares the new tree to the previous tree and make the minimum necessary changes to the actual DOM so that the UI reflects the new state. This process is known as "reconciliation".
+
+
+
+
+
+
+
+8) Controlled components are components in which the value of an input is controlled by the state of the component. In other words, the component decides what the value of the input should be, and it updates the value as the user interacts with it. An example of a controlled component would be a form input where the value is controlled by the state.
+
+
+
+Uncontrolled components, on the other hand, are components in which the value of an input is not controlled by the state of the component. Instead, the value is controlled by the DOM. An example of an uncontrolled component would be a form input where the value is controlled by the DOM, and not the state of the component.
+
+
+
+The design of controlled components is relatively simple, because it only needs to keep track of the state and the value of the input is controlled by it. But it requires more code to handle the changes in the state. On the other hand, uncontrolled components are easy to write but requires more code to handle the changes in the value of input fields as the value is not controlled by the state.
+
+
+

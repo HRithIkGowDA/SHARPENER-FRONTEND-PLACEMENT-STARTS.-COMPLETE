@@ -1,0 +1,41 @@
+React JS Round 2 - SET 2 - Solutions
+
+
+
+
+
+
+1) The virtual DOM is a representation of the actual DOM (Document Object Model) in memory. React uses the virtual DOM to update the UI efficiently. When the state of a component changes, React will first update the virtual DOM, and then it will compare the virtual DOM to the actual DOM. It will then make the minimum number of changes necessary to update the actual DOM to match the virtual DOM. This process is called "reconciliation" and it helps to minimize the number of updates made to the actual DOM, which improves the performance of the application.
+
+
+
+2) Controlled components are those in which the component's state is controlled by React and updates to the component's state cause the component to re-render. Uncontrolled components are those in which the component's state is controlled by the DOM and updates to the component's state do not cause the component to re-render. Controlled components are generally preferred in React because they make it easier to track the state of the component and understand how it is being updated.
+
+
+
+3) Types of side effects in React component are :
+
+Network requests
+Timers
+Document title updates
+Local storage updates
+Analytics tracking
+etc.
+
+
+4) Yes, useEffect can return a function. This function is called the cleanup function. It is executed when the component unmounts or the effect is re-run. You can use this function to clean up any resources that were created during the effect.
+
+
+
+5) Different ways to style a React component are:
+
+Inline styling
+CSS classes
+CSS modules
+Styled Components
+Material-UI
+etc
+
+
+
+

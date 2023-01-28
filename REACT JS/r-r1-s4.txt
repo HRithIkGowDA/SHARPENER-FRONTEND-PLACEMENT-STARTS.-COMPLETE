@@ -1,0 +1,51 @@
+React JS Round 1 - SET 4 - Solutions
+
+
+
+
+1) Reconciliation in React is the process by which the framework updates the DOM to reflect any changes in the components' state or props. When a component's state or props change, React will compare the virtual DOM representation of the component with the actual DOM, and make the minimum number of changes necessary to bring the two into alignment.
+
+
+
+2)  Fragments are a way to group a list of children without adding extra nodes to the DOM. They are useful when you want to return multiple elements from a component's render method, but don't want to wrap them in an extra DOM node.
+
+Instead of using a div or other element to group the children, you can use the React.Fragment or <>
+
+
+
+3)  When using fragments, React does not add any extra elements to the DOM. Instead, it uses a special type of placeholder element that is not rendered in the final HTML. This allows the children to be rendered directly under the parent element, without adding any extra nodes to the DOM tree.
+
+
+
+4)  React has many advantages compared to vanilla JavaScript, including:
+
+A virtual DOM that improves performance by minimizing the amount of work that needs to be done to update the actual DOM
+A declarative approach to building user interfaces, which makes it easier to reason about the state of the application
+A component-based architecture that promotes code reuse and modularity
+A rich ecosystem of third-party libraries and tools that can be used to extend the functionality of React
+5) React uses the className attribute instead of the class attribute to avoid conflicts with the class keyword in JavaScript.
+
+
+
+6) The children prop is a special prop that allows a component to access the elements that are nested inside of it. It can be used to access the children of a component, regardless of whether they are other components or plain HTML elements.
+
+
+
+<Card title="Card title" description="Card description">
+
+ <img src="image.jpg" alt="image" />
+
+ <p>Additional content</p>
+
+</Card>
+
+
+
+the Card component can use the children prop to access the img and p elements that are nested inside of it, and render them alongside the title and description.
+
+
+
+
+
+
+

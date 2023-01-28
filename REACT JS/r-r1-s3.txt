@@ -1,0 +1,211 @@
+React JS Round 1 - SET 3 - Solutions
+
+
+
+
+1) There are several ways to style a React component, including:
+
+Using inline styles
+Using CSS classes
+Using CSS modules
+Using a CSS-in-JS library like styled-components or emotion
+
+
+2) Some techniques to optimize React app performance include:
+
+Using the React.memo higher-order component to only re-render a component if its props have changed
+Using the useEffect hook with a dependancy array to only re-run an effect when certain props or state have changed
+Using the useCallback hook to memoize callback functions and prevent unnecessary re-renders
+Splitting your application into smaller, more focused components
+
+
+3) One way for parent to child communication is to pass props from the parent component to the child component.
+
+
+
+// Parent component
+
+function Parent() {
+
+ const message = "Hello from parent";
+
+ return <Child message={message} />;
+
+}
+
+
+
+// Child component
+
+function Child({ message }) {
+
+ return <div>{message}</div>;
+
+}
+
+
+
+4) There are several ways for child to parent communication, including:
+
+Using the useContext hook to access context in the child component
+Using a callback function passed as a prop from the parent to the child
+
+
+5)  Some ways to communicate between sibling components include:
+
+Using the useContext hook to share state between components
+Using a state management library like Redux or MobX
+Lifting the state up to a common ancestor component and passing it down as props to the sibling components.
+
+
+6) Higher Order Components (HOCs) are a pattern in React that allow you to reuse component logic. An HOC is a function that takes a component as an argument and returns a new component with additional functionality. HOCs are used to add functionality that is common across multiple components, such as authentication or performance optimization.
+
+
+
+// HOC that adds a loading spinner
+
+const withLoading = (WrappedComponent) => {
+
+  return class extends React.Component {
+
+    constructor(props) {
+
+      super(props);
+
+      this.state = {
+
+        isLoading: true,
+
+      };
+
+    }
+
+
+
+
+
+7)  The different phases of the component lifecycle in React are:
+Mounting: When a component is being added to the DOM, the following methods are called in the following order:
+constructor()
+static getDerivedStateFromProps()
+render()
+componentDidMount()
+Updating: When a component is being re-rendered due to a change in props or state, the following methods are called in the following order:
+static getDerivedStateFromProps()
+shouldComponentUpdate()
+render()
+getSnapshotBeforeUpdate()
+componentDidUpdate()
+Unmounting: When a component is being removed from the DOM, the following method is called:
+componentWillUnmount()
+Error handling: When there is an error during the rendering, lifecycle methods or constructors of the whole tree below the component the following method is called:
+static getDerivedStateFromError()
+componentDidCatch()
+
+
+
+
+
+
+import React, { Component } from 'react';
+
+
+
+class MyComponent extends Component {
+
+ constructor(props) {
+
+  super(props);
+
+  console.log('constructor');
+
+  this.state = {
+
+   count: 0,
+
+  };
+
+ }
+
+
+
+ componentDidMount() {
+
+  console.log('componentDidMount');
+
+  // setup a timer to increase the count every second
+
+  this.timer = setInterval(() => {
+
+   this.setState({ count: this.state.count + 1 });
+
+  }, 1000);
+
+ }
+
+
+
+ componentDidUpdate() {
+
+  console.log('componentDidUpdate');
+
+ }
+
+
+
+ componentWillUnmount() {
+
+  console.log('componentWillUnmount');
+
+  clearInterval(this.timer);
+
+ }
+
+
+
+ render() {
+
+  console.log('render');
+
+  return <div>Count: {this.state.count}</div>;
+
+ }
+
+}
+
+
+
+
+
+
+
+8)  Custom Hooks are a way to reuse stateful logic across different components. They are a way to extract component's state and behavior into a reusable function. Custom hooks always start with the word "use" and can call other hooks in it.
+
+
+
+function MyComponent() {
+
+ const width = useWindowWidth();
+
+ return <div>Window width: {width}</div>;
+
+}
+
+ny component that calls the useWindowWidth hook will have access to the current width of the window and will re-render when it changes.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
